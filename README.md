@@ -1,18 +1,12 @@
-# starter-3d
-A 3d game starter based on Vite
+# Basic platformer
 
-## Usage
+A basic platformer game made with [Fibbo](https://fibbojs.github.io/fibbo).
 
-- Clone the repository
-
-```bash
-npx tiged fibbojs/starter-3d starter-3d
-```
+## Development
 
 - Install the dependencies
 
 ```bash
-cd starter-3d
 npm install
 ```
 
