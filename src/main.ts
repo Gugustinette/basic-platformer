@@ -1,10 +1,11 @@
 import * as THREE from 'three'
-import RAPIER from '@dimforge/rapier3d'
-import { FComponentEmpty, FCuboid, FGameCamera, FScene } from '@fibbojs/3d'
+import { FComponentEmpty, FGameCamera, FScene } from '@fibbojs/3d'
 import { FKeyboard } from '@fibbojs/event'
 import { fDebug } from '@fibbojs/devtools'
 import './style.css'
 import Character from './classes/Character'
+import { loadLevel } from './level'
+import Coin from './classes/Coin'
 
 (async () => {
   // Initialize the scene
@@ -27,16 +28,8 @@ import Character from './classes/Character'
   deathZone.initCollider()
   scene.addComponent(deathZone)
 
-  // Create a ground
-  const ground = new FCuboid(scene, {
-    position: { x: 0, y: -0.1, z: 0 },
-    scale: { x: 15, y: 0.1, z: 15 },
-  })
-  ground.initRigidBody({
-    rigidBodyType: RAPIER.RigidBodyType.Fixed,
-  })
-  ground.setColor(0x348C31)
-  scene.addComponent(ground)
+  // Init level
+  loadLevel(scene)
 
   // Create a character
   const character = new Character(scene)
@@ -49,6 +42,9 @@ import Character from './classes/Character'
   character.onCollisionWith(deathZone, () => {
     console.log('Character fell into the death zone!')
     character.setPosition({ x: 0, y: 10, z: 0 })
+  })
+  character.onCollisionWith(Coin, () => {
+    console.log('Character collected a coin!')
   })
 
   // Create keyboard
