@@ -1,15 +1,15 @@
 {
-  "name": "starter-3d",
+  "name": "basic-platformer",
   "type": "module",
   "version": "0.0.1",
   "private": true,
-  "author": "John Doe <john.doe@fibbo.js>",
-  "homepage": "https://johndoe.github.io/starter-3d",
+  "author": "Augustin Mercier <mercier.augustin@outlook.fr>",
+  "homepage": "https://gugustinette.github.io/basic-platformer",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/johndoe/starter-3d.git"
+    "url": "git+https://github.com/gugustinette/basic-platformer.git"
   },
-  "bugs": "https://github.com/johndoe/starter-3d/issues",
+  "bugs": "https://github.com/gugustinette/basic-platformer/issues",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
