@@ -1,5 +1,6 @@
-import { FCharacterControllerKP, FFBX } from '@fibbojs/3d'
+import { FFBX } from '@fibbojs/3d'
 import type { FRigidBodyOptions, FScene } from '@fibbojs/3d'
+import { CharacterController } from './CharacterController'
 
 export default class Character extends FFBX {
   constructor(scene: FScene) {
@@ -10,7 +11,7 @@ export default class Character extends FFBX {
     })
 
     // Initialize the character controller
-    this.controller = new FCharacterControllerKP(scene, {
+    this.controller = new CharacterController(scene, {
       component: this,
     })
   }
