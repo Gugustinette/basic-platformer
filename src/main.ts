@@ -5,7 +5,6 @@ import { fDebug } from '@fibbojs/devtools'
 import './style.css'
 import Character from './classes/Character'
 import { loadLevel } from './level'
-import Coin from './classes/Coin'
 
 (async () => {
   // Initialize the scene
@@ -42,9 +41,6 @@ import Coin from './classes/Coin'
   character.onCollisionWith(deathZone, () => {
     console.log('Character fell into the death zone!')
     character.setPosition({ x: 0, y: 10, z: 0 })
-  })
-  character.onCollisionWith(Coin, () => {
-    console.log('Character collected a coin!')
   })
 
   // Create keyboard

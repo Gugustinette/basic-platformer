@@ -121,7 +121,7 @@ export class CharacterController extends FController {
 
     // Jump
     fKeyboard.onKeyDown(' ', () => {
-      this.yVelocity = 10
+      this.yVelocity = 14
     })
 
     // The gap the controller will leave between the character and its environment

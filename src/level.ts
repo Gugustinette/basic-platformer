@@ -33,6 +33,10 @@ export function loadLevel(scene: FScene) {
     position: { x: -6, y: 6, z: -19 },
     rotationDegree: { x: 0, y: 60, z: 0 },
   }))
+  scene.addComponent(new BlockMoving(scene, {
+    position: { x: 0, y: -4, z: 0 },
+    rotationDegree: { x: 0, y: 60, z: 0 },
+  }))
 
   // Add decoration
   scene.addComponent(new Crate(scene, {
@@ -44,7 +48,7 @@ export function loadLevel(scene: FScene) {
     rotationDegree: { x: 0, y: 45, z: 0 },
   }))
   scene.addComponent(new Stones(scene, {
-    position: { x: 0, y: 2, z: -1 },
+    position: { x: 0, y: 2, z: 1 },
     rotationDegree: { x: 0, y: 20, z: 0 },
   }))
   scene.addComponent(new Stones(scene, {
@@ -73,6 +77,18 @@ export function loadLevel(scene: FScene) {
   // Add coin
   scene.addComponent(new Coin(scene, {
     position: { x: 4, y: 3, z: -8 },
+  }))
+  scene.addComponent(new Coin(scene, {
+    position: { x: 2.5, y: 2, z: 0 },
+  }))
+  scene.addComponent(new Coin(scene, {
+    position: { x: -1.5, y: 5, z: 3 },
+  }))
+  scene.addComponent(new Coin(scene, {
+    position: { x: -1, y: 6.5, z: -18 },
+  }))
+  scene.addComponent(new Coin(scene, {
+    position: { x: 0, y: -2.5, z: 0 },
   }))
 
   // Add door
